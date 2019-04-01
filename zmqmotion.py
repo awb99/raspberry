@@ -18,7 +18,11 @@ socket.bind("tcp://*:24001")
 
 # https://pi4j.com/1.2/pins/model-3b-rev1.html#Numbering_Scheme
 # I use The BOARD config, so 1-40
+# configuration of motion detector:
 # http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-hc-sr501-motion-sensor-tutorial/
+
+# edge detection:
+# https://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/
 
 
 print(GPIO.RPI_INFO)

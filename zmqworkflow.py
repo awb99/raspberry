@@ -13,7 +13,7 @@ import pygame
 pygame.mixer.init()
 pygame.mixer.music.load("mp3/intercom.mp3")
 
-log("zmq-motion subscribe. zmqPUB port: 24001")
+log("zmq-workflow started")
 
 context = zmq.Context()
 socket = context.socket(zmq.SUB)

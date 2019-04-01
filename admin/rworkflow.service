@@ -1,0 +1,14 @@
+[Unit]
+Description=Raspberry Workflow Engine
+
+[Service]
+ExecStart= /usr/bin/python zmqworkflow.py
+Restart=always
+User=pi
+Group=pi
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/pi/Documents/raspberry
+[Install]
+WantedBy=multi-user.target
+

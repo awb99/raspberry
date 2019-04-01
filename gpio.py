@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
+# configuration of motion detector:
+# http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-hc-sr501-motion-sensor-tutorial/
 # https://pi4j.com/1.2/pins/model-3b-rev1.html#Numbering_Scheme
 # I use The BOARD config, so 1-40
 
