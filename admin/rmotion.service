@@ -2,14 +2,13 @@
 Description=Raspberry Motion Detector
 
 [Service]
-ExecStart= /usr/bin/python motionzmq.py
+ExecStart= /usr/bin/python zmqmotion.py
 Restart=always
-User=root
-Group=root
+User=pi
+Group=pi
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
-WorkingDirectory=/home/florian/Documents/raspberry
-
+WorkingDirectory=/home/pi/Documents/raspberry
 [Install]
 WantedBy=multi-user.target
 
