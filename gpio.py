@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
+# https://pi4j.com/1.2/pins/model-3b-rev1.html#Numbering_Scheme
+# I use The BOARD config, so 1-40
+
 try:
     import RPi.GPIO as GPIO
 except RuntimeError:
@@ -12,7 +15,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(True)
 
 cLED=40
-cMotion=26
+cMotion=38
 
 GPIO.setup(cLED, GPIO.OUT)
 GPIO.setup(cMotion, GPIO.IN)
