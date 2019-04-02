@@ -34,9 +34,8 @@
 # integrated SPI bus of the Raspberry Pi.
 
 # This is different for the WS2812B models. These strips have only a single data pin, which is why before sending a
-#  lot more has to be calculated. For this reason the WS2801B RGB LED strips are preferable to the WS2812 for use 
+# lot more has to be calculated. For this reason the WS2801B RGB LED strips are preferable to the WS2812 for use 
 # on the Raspberry Pi, despite their supposedly smaller “serial number”.
-
 
 from rpi_ws281x import *
 
@@ -49,6 +48,12 @@ TOTAL_LED_COUNT = 300
 
 strip = Adafruit_NeoPixel(TOTAL_LED_COUNT, 18, 800000, 5, False, 255)
 strip.begin()
+
+
+LED_CHIP_NUMBER=10
+R=255
+G=255
+B=255
 strip.setPixelColorRGB(LED_CHIP_NUMBER, R, G, B)
 strip.show()
 
