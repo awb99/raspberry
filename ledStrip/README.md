@@ -6,8 +6,8 @@
 # 5 meter @ 60 leds/meter = 300 leds = 18A
 
 # Netzteil 50W 5V 10A  => Das Netzteil kann 2.5 meter betreiben.
-# power supply ground needs to be connected to ground of converter, and ground of raspberry
 
+# power supply ground needs to be connected to ground of converter, and ground of raspberry
 #  It is important that GND / ground is connected to both the Raspberry Pi and the external power supply. 
 
 # 6 x TXS0108E Logic Level Converter
@@ -36,25 +36,4 @@
 # This is different for the WS2812B models. These strips have only a single data pin, which is why before sending a
 # lot more has to be calculated. For this reason the WS2801B RGB LED strips are preferable to the WS2812 for use 
 # on the Raspberry Pi, despite their supposedly smaller “serial number”.
-
-from rpi_ws281x import *
-
-TOTAL_LED_COUNT = 300
-
-# 18 = GPIO pin
-# frequency:  800000  # LED signal frequency in hertz (usually 800khz)
-# 5 = CMA CHANNEL
-# 255 = LED BRIGHTNESS.
-
-strip = Adafruit_NeoPixel(TOTAL_LED_COUNT, 18, 800000, 5, False, 255)
-strip.begin()
-
-
-LED_CHIP_NUMBER=10
-R=255
-G=255
-B=255
-strip.setPixelColorRGB(LED_CHIP_NUMBER, R, G, B)
-strip.show()
-
 

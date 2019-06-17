@@ -28,7 +28,7 @@ GPIO.setup(cMotion, GPIO.IN)
 # time.sleep(5)
 
 while True:
-    if GPIO.input(cMotion):
+    if True: # GPIO.input(cMotion)
         print("Motion Detected...")
         GPIO.output(cLED, True)
         time.sleep(1) #Buzzer turns on for 0.5 sec
