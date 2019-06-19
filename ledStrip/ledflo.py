@@ -18,17 +18,37 @@ def colorWipe(strip, color, wait_ms=50):
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
-        strip.show()
-        time.sleep(wait_ms/1000.0)
+    strip.show()
+    time.sleep(wait_ms/1000.0)
 
-c=Color(200, 200, 200)
+c=Color(200, 0, 0)
 
 #for x in range(0, 300):
 #    print("setting color for " + str(x))
 #    strip.setPixelColor(x, c)
 #    strip.show()
 
-colorWipe(strip,c)
-strip.show()
-time.sleep(1000)
+#colorWipe(strip,c)
+#strip.show()
+#time.sleep(1000)
+
+try:
+        while True:
+            print ('red.')
+            colorWipe(strip, Color(255, 0, 0))  # Red wipe
+            time.sleep(10)
+            print ('green.')
+            colorWipe(strip, Color(0, 255, 0))  # Geen wipe
+            time.sleep(10)
+            print ('blue.')
+            colorWipe(strip, Color(0, 0, 255))  # Blue wipe
+            time.sleep(10)
+            print ('white.')
+            colorWipe(strip, Color(255, 255, 255))  # white wipe
+            time.sleep(10)
+
+
+except KeyboardInterrupt:
+    #if args.clear:
+    colorWipe(strip, Color(0,0,0))
 
